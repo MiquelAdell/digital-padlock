@@ -65,12 +65,11 @@
     .display {
         display: flex;
         justify-content: center;
+        align-items: center;
         margin-bottom: 5vh;
         font-size: 6vw;
-        letter-spacing: 1vw;
         color: #fff;
         z-index: 2;
-        flex-wrap: wrap;
     }
 
     .digit {
@@ -115,26 +114,11 @@
         align-items: center;
         cursor: pointer;
         user-select: none;
-        transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+        transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
         color: #0f0;
         text-shadow: 0 0 1vw #0f0, 0 0 2vw #0f0;
         box-shadow: 0 0 1vw rgba(0, 255, 0, 0.5);
-    }
-
-    @media (min-width: 500px) {
-        .key {
-            font-size: 2.5rem;
-        }
-
-        .digit {
-            font-size: 3rem;
-            line-height: 76px;
-        }
-
-        .display {
-            font-size: 3rem;
-            letter-spacing: 10px;
-        }
+        margin: auto;
     }
 
     .key:hover {
@@ -147,6 +131,27 @@
         box-shadow: 0 0 3vw rgba(0,255,0,1), inset 0 0 2vw rgba(0,255,0,0.5);
         color: #fff;
         text-shadow: 0 0 2vw #0f0, 0 0 4vw #0f0;
+    }
+
+    @media (min-width: 500px) {
+        .display {
+            font-size: 3rem;
+        }
+        .digit {
+            font-size: 3rem;
+            line-height: 76px;
+        }
+        /* Make the keypad narrower on desktop */
+        .keypad {
+            grid-template-columns: repeat(3, 80px);
+            grid-gap: 20px;
+        }
+        .key {
+            width: 80px;
+            height: 80px;
+            font-size: 2rem;
+            border-radius: 10px;
+        }
     }
 
     /* Hide elements when code is correct */
