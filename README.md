@@ -1,4 +1,4 @@
 # digital-padlock
 a digital padlock for an escape room
 
-The code is 6392
+The code is 6512
